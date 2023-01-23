@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CatchMcQueen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="i9p-GT-tzN">
+                                <rect key="frame" x="-126" y="-21" width="633" height="873"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="633" id="Tjm-he-fOk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58r-qx-yGz">
+                                <rect key="frame" x="101" y="65" width="191" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lWg-Co-Ffz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTZ-iu-ja4">
+                                <rect key="frame" x="101" y="118" width="191" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="tLX-Op-0ZD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERj-Lw-enf">
+                                <rect key="frame" x="52" y="644" width="261" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="ZtG-i8-Qw2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="33"/>
+                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mcqueen" translatesAutoresizingMaskIntoConstraints="NO" id="w9d-du-9aJ">
+                                <rect key="frame" x="110" y="284" width="161" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ERj-Lw-enf" secondAttribute="bottom" constant="92" id="1sO-m1-ceN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ERj-Lw-enf" secondAttribute="trailing" constant="80" id="4nL-yu-Zyw"/>
+                            <constraint firstItem="58r-qx-yGz" firstAttribute="trailing" secondItem="zTZ-iu-ja4" secondAttribute="trailing" id="Esb-6i-bnP"/>
+                            <constraint firstItem="58r-qx-yGz" firstAttribute="leading" secondItem="zTZ-iu-ja4" secondAttribute="leading" id="N9b-tY-zto"/>
+                            <constraint firstItem="58r-qx-yGz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NRt-Ec-qkP"/>
+                            <constraint firstItem="i9p-GT-tzN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-126" id="PlW-BG-rJd"/>
+                            <constraint firstItem="58r-qx-yGz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="YQS-39-74b"/>
+                            <constraint firstItem="58r-qx-yGz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="cZt-4g-AaQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="i9p-GT-tzN" secondAttribute="bottom" constant="-34" id="jHl-gb-hSt"/>
+                            <constraint firstItem="zTZ-iu-ja4" firstAttribute="top" secondItem="58r-qx-yGz" secondAttribute="bottom" constant="8" id="pGh-wx-ORj"/>
+                            <constraint firstItem="i9p-GT-tzN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-80" id="upx-DM-yNI"/>
+                            <constraint firstItem="ERj-Lw-enf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="x6K-eH-uBg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mcqueenImage" destination="w9d-du-9aJ" id="lZj-vA-mom"/>
+                        <outlet property="scoreLabel" destination="zTZ-iu-ja4" id="cUf-I0-GmZ"/>
+                        <outlet property="timeLabel" destination="58r-qx-yGz" id="qio-6n-gVM"/>
+                        <outlet property="topScoreLabel" destination="ERj-Lw-enf" id="8sm-JT-Khw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="736" height="1309"/>
+        <image name="mcqueen" width="1176" height="627"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
